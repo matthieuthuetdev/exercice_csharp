@@ -1,0 +1,28 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Demarrage
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double solde , depense;
+            int nombre_de_magasin;
+            Console.WriteLine("saisisez le montant que barnabé posède avant de faire ces cources :");
+            nombre_de_magasin = 0;
+            solde = int.Parse(Console.ReadLine());
+            do
+            {
+                nombre_de_magasin +=1;
+                depense = solde / 2 + 1;
+                solde = solde - depense;
+            }while (solde > 1);
+            nombre_de_magasin++;
+            depense = solde;
+            solde -= depense;
+            Console.WriteLine($"avec un solde iniciale de {solde} il peut effectuer des achat dans {nombre_de_magasin} magasin.");
+        }
+
+    }
+}
