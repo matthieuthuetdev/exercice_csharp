@@ -1,0 +1,41 @@
+using Microsoft.Win32.SafeHandles;
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Net.Mail;
+
+namespace Demarrage
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] mon_tableau = { 1, 2, 3, 5, 7, 9, 10 };
+            int saisie_utilisateur;
+            bool trouver;
+            int index;
+            index = 0;
+            trouver = false;
+            Console.WriteLine("saisisez un nombre à rechercher dans le tableau :");
+            saisie_utilisateur = int.Parse(Console.ReadLine());
+            for(int i = 0; i < mon_tableau.Length; i++)
+            {
+                if (saisie_utilisateur == mon_tableau[i])
+                {
+                    trouver = true;
+                    index = i;
+                }
+                
+                
+            }
+            if (trouver)
+            {
+                Console.WriteLine($"le chiffre {saisie_utilisateur} à été trouver à l'indise : {index}");
+            }
+            else
+            {
+                Console.WriteLine("404 not found");
+            }
+        }
+
+    }
+}
