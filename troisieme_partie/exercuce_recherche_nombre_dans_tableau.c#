@@ -14,10 +14,12 @@ namespace Demarrage
             bool trouver;
             int index;
             index = 0;
+            int i;
+            i = 0;
             trouver = false;
             Console.WriteLine("saisisez un nombre à rechercher dans le tableau :");
             saisie_utilisateur = int.Parse(Console.ReadLine());
-            for(int i = 0; i < mon_tableau.Length; i++)
+            while (i < mon_tableau.Length && !trouver)
             {
                 if (saisie_utilisateur == mon_tableau[i])
                 {
@@ -25,6 +27,7 @@ namespace Demarrage
                     index = i;
                 }
                 
+                i++;
                 
             }
             if (trouver)
