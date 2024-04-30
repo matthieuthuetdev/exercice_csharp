@@ -4,7 +4,7 @@ namespace compte_library
 {
     public class Compte
     {
-        public int NumeroDeCompte;
+        private int NumeroDeCompte;
         private string NomDuProprietaireDuCompte;
         private double SoldeDuCompte;
         private double DecouvertAutorise;
@@ -17,17 +17,16 @@ namespace compte_library
             DecouvertAutorise = decouvertAutorise;
         }
 
-        public bool Crediter(double montant)
-        {
-            SoldeDuCompte += montant;
-            return true;
+        public void Crediter(double montant)
+        { 
+            SoldeDuCompte += montant > 0 ? montant : 0;
         }
 
         public bool Debiter(double montant)
         {
-            if (SoldeDuCompte-montant>=this.DecouvertAutorise && montant>=0)
+            if (SoldeDuCompte-montant>=this.DecouvertAutorise)
             {
-                SoldeDuCompte -= montant;
+                SoldeDuCompte -= montant > 0 ? montant : 0;
                 return true;
             }
             else
@@ -50,7 +49,7 @@ namespace compte_library
         }
         public override string ToString()
         {
-            return "ce compte a pour numero " + this.NumeroDeCompte + " il appartien à " + this.NomDuProprietaireDuCompte + " sont solde est de " + this.SoldeDuCompte + " et sont découvert autoriser est de " + this.DecouvertAutorise;
+            return "ce compte a pour numero " + this.NumeroDeCompte + "\n il appartient à " + this.NomDuProprietaireDuCompte + "\n sont solde est de " + this.SoldeDuCompte + "\n et sont découvert autoriser est de " + this.DecouvertAutorise+"\n \n" ;
         }
     }
 }
