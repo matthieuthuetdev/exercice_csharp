@@ -17,5 +17,12 @@ namespace pointLibrary
             this.abscisse = 0;
             this.ordonnee = 0;
         }
+        public bool moov(int nouvelleAbscisse, int nouvelleOrdonnee)
+        {
+            this.abscisse = nouvelleAbscisse;
+            this.ordonnee = nouvelleOrdonnee;
+            return true;
+        }
+
     }
 }
