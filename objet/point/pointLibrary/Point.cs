@@ -1,4 +1,6 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System.Formats.Asn1;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace pointLibrary
 {
@@ -23,6 +25,14 @@ namespace pointLibrary
             this.ordonnee = nouvelleOrdonnee;
             return true;
         }
-
+        public bool simAbscisse()
+        {
+            this.abscisse = this.abscisse * -1;
+            return true;
+        }
+        public override string ToString()
+        {
+            return "les cordonnée du point sont : X"+ abscisse+"Y"+ordonnee;
+        }
     }
 }
