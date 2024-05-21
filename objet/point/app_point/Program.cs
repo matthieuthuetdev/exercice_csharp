@@ -9,6 +9,12 @@ namespace app_point
         {
             pointLibrary.Point premierPoint = new pointLibrary.Point(7, 7);
             Console.WriteLine(premierPoint.ToString());
+            premierPoint.moov
+            Console.WriteLine(premierPoint.ToString());
+            Console.WriteLine(premierPoint.ToString());
+            Console.WriteLine(premierPoint.ToString());
+
+
         }
     }
 }

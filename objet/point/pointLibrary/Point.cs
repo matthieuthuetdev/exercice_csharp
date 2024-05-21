@@ -45,6 +45,7 @@ namespace pointLibrary
         {
             this.abscisse = this.ordonnee;
             this.ordonnee = this.abscisse;
+            return true;
         }
         public override string ToString()
         {
