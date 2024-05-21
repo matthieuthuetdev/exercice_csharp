@@ -27,12 +27,12 @@ namespace pointLibrary
         }
         public bool simAbscisse()
         {
-            Point deuxiemePoint = new Point(this.abscisse * -1,this.ordonnee);
+            Point abscisim = new Point(this.abscisse * -1,this.ordonnee);
             return true;
         }
         public bool simOrdonnee()
         {
-            Point deuxiemePoint = new Point(this.abscisse, this.ordonnee * -1);
+            Point ordosim = new Point(this.abscisse, this.ordonnee * -1);
             return true;
         }
         public override string ToString()
