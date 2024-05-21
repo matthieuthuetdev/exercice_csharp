@@ -1,5 +1,5 @@
 ﻿using System.Drawing;
-
+using pointLibrary;
 
 namespace app_point
 {
@@ -7,7 +7,7 @@ namespace app_point
     {
         static void Main(string[] args)
         {
-            Point premierPoint = new Point(7, 7);
+            pointLibrary.Point premierPoint = new pointLibrary.Point(7, 7);
             Console.WriteLine(premierPoint.ToString());
         }
     }
