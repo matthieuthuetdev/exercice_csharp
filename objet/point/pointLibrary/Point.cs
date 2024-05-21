@@ -1,4 +1,5 @@
-﻿using System.Formats.Asn1;
+﻿using System.Data.SqlTypes;
+using System.Formats.Asn1;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 
@@ -34,6 +35,16 @@ namespace pointLibrary
         {
             Point ordosim = new Point(this.abscisse, this.ordonnee * -1);
             return true;
+        }
+        public bool simOrigine()
+        {
+            Point origineSim = new Point(this.abscisse * -1, this.ordonnee * -1);
+            return true;
+        }
+        public bool permuter()
+        {
+            this.abscisse = this.ordonnee;
+            this.ordonnee = this.abscisse;
         }
         public override string ToString()
         {
