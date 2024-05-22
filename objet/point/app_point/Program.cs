@@ -19,7 +19,7 @@ namespace app_point
             abscisim = premierPoint.simAbscisse();
             Console.WriteLine(abscisim.ToString());
             Console.WriteLine("utilisation de la fonction simOrdonnee");
-            ordosim = premierPoint.simOrigine();
+            ordosim = premierPoint.simOrdonnee();
             Console.WriteLine(ordosim.ToString());
             Console.WriteLine("utilisation de la fonction simorigine");
             origineSim =  origineSim = premierPoint.simOrigine();

@@ -43,8 +43,11 @@ namespace pointLibrary
         }
         public void permuter()
         {
-            this.abscisse = this.ordonnee;
-            this.ordonnee = this.abscisse;
+            int newOrdonnee = this.abscisse;
+            int newAbscisse = this.ordonnee;
+            this.abscisse = newAbscisse;
+            this.ordonnee = newOrdonnee;
+
         }
         public override string ToString()
         {
