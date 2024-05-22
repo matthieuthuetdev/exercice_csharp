@@ -26,20 +26,20 @@ namespace pointLibrary
             this.ordonnee = nouvelleOrdonnee;
             return true;
         }
-        public bool simAbscisse()
+        public object simAbscisse()
         {
-            Point abscisim = new Point(this.abscisse * -1,this.ordonnee);
-            return true;
+            Point abscisim = new Point(this.abscisse * -1, this.ordonnee);
+            return abscisim;
         }
-        public bool simOrdonnee()
+        public object simOrdonnee()
         {
             Point ordosim = new Point(this.abscisse, this.ordonnee * -1);
-            return true;
+            return ordosim;
         }
-        public bool simOrigine()
+        public object simOrigine()
         {
             Point origineSim = new Point(this.abscisse * -1, this.ordonnee * -1);
-            return true;
+            return origineSim;
         }
         public bool permuter()
         {
