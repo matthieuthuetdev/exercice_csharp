@@ -36,7 +36,7 @@ namespace pointLibrary
             Point ordosim = new Point(this.abscisse, this.ordonnee * -1);
             return ordosim;
         }
-        public object simOrigine()
+        public Point simOrigine()
         {
             Point origineSim = new Point(this.abscisse * -1, this.ordonnee * -1);
             return origineSim;
