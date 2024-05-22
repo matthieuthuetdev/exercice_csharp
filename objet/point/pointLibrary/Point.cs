@@ -20,18 +20,18 @@ namespace pointLibrary
             this.abscisse = 0;
             this.ordonnee = 0;
         }
-        public bool moov(int nouvelleAbscisse, int nouvelleOrdonnee)
+        public void moov(int nouvelleAbscisse, int nouvelleOrdonnee)
         {
             this.abscisse = nouvelleAbscisse;
             this.ordonnee = nouvelleOrdonnee;
-            return true;
+            
         }
-        public object simAbscisse()
+        public Point simAbscisse()
         {
             Point abscisim = new Point(this.abscisse * -1, this.ordonnee);
             return abscisim;
         }
-        public object simOrdonnee()
+        public Point simOrdonnee()
         {
             Point ordosim = new Point(this.abscisse, this.ordonnee * -1);
             return ordosim;
@@ -41,11 +41,10 @@ namespace pointLibrary
             Point origineSim = new Point(this.abscisse * -1, this.ordonnee * -1);
             return origineSim;
         }
-        public bool permuter()
+        public void permuter()
         {
             this.abscisse = this.ordonnee;
             this.ordonnee = this.abscisse;
-            return true;
         }
         public override string ToString()
         {

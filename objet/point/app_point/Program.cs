@@ -24,7 +24,9 @@ namespace app_point
             Console.WriteLine("utilisation de la fonction simorigine");
             origineSim =  origineSim = premierPoint.simOrigine();
             Console.WriteLine(origineSim.ToString());
-
+            Console.WriteLine("utilisation de la fonction permuter");
+            premierPoint.permuter();
+            Console.WriteLine(premierPoint.ToString());
 
 
         }
