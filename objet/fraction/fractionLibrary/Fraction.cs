@@ -1,7 +1,14 @@
 ﻿namespace fractionLibrary
 {
-    public class Class1
+    public class Fraction
     {
-
+        private int Numerateur;
+        private int Denominateur;
+        public Fraction ( int numerateur, int denominateur)
+        {
+            this.Numerateur = numerateur;
+            this.Denominateur = denominateur;
+        }
+        
     }
 }
