@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app_fraction", "app_fraction\app_fraction.csproj", "{6FD91C4C-E6B6-47E7-816C-EC9D64CF3A6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fractionLibrary", "fractionLibrary\fractionLibrary.csproj", "{F504812F-D8F3-4ECD-8FA2-04FA3334A9D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6FD91C4C-E6B6-47E7-816C-EC9D64CF3A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FD91C4C-E6B6-47E7-816C-EC9D64CF3A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FD91C4C-E6B6-47E7-816C-EC9D64CF3A6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F504812F-D8F3-4ECD-8FA2-04FA3334A9D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F504812F-D8F3-4ECD-8FA2-04FA3334A9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F504812F-D8F3-4ECD-8FA2-04FA3334A9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F504812F-D8F3-4ECD-8FA2-04FA3334A9D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
