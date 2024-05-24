@@ -9,6 +9,7 @@
             this.Numerateur = numerateur;
             this.Denominateur = denominateur;
         }
+
         public override string ToString()
         {
             if (this.Numerateur == 0)
@@ -22,6 +23,10 @@
             else if (this.Denominateur == 0)
             {
                 return "erreure : aucun nombre ne peut être diviser par 0"
+            }
+            else
+            {
+                return "la fraction est égale à : " + this.Numerateur + "/" + this.Denominateur;
             }
         }
     }
