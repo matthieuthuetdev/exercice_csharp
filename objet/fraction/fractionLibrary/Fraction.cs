@@ -10,11 +10,20 @@
             this.Denominateur = denominateur;
         }
 
+
+
+
+
+
+
+
+
+
         public override string ToString()
         {
             if (this.Numerateur == 0)
             {
-                return "la fraction est égale à : 0 \n"
+                return "la fraction est égale à : 0 \n";
             }
             else if (this.Denominateur == 1)
             {
