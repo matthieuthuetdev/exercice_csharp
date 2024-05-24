@@ -31,7 +31,7 @@
             }
             else if (this.Denominateur == 0)
             {
-                return "erreure : aucun nombre ne peut être diviser par 0"
+                return "erreure : aucun nombre ne peut être diviser par 0";
             }
             else
             {
