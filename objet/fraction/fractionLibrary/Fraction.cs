@@ -9,7 +9,10 @@
             this.Numerateur = numerateur;
             this.Denominateur = denominateur;
         }
-
+        public void Oppose()
+        {
+            this.Numerateur = this.Numerateur * -1; 
+        }
 
 
 
