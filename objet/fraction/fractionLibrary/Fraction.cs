@@ -62,6 +62,10 @@
                 this.Denominateur *= -1;
             }
         }
+        public void Plus(Fraction fplus)
+        {
+
+        }
 
         public override string ToString()
         {
