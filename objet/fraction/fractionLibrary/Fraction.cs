@@ -13,7 +13,13 @@
         {
             this.Numerateur = this.Numerateur * -1; 
         }
-
+        public void Inverse()
+        {
+            int newNumerateur = this.Denominateur;
+            int newDenominateur = this.Numerateur;
+            this.Numerateur -= newNumerateur;
+            this.Denominateur -= newDenominateur;
+        }
 
 
 
