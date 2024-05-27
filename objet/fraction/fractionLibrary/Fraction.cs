@@ -57,10 +57,38 @@
             int pgcd = GetPgcd();
             this.Numerateur /=pgcd;
             this.Denominateur /=pgcd;
-            this.Signe()
+            this.Signe();
             
         }
-        
+        public Fraction Plus(Fraction fplus)
+        {
+            int numerateur1 = this.Numerateur;
+            int denominateur1 = this.Denominateur;
+            int numerateur2 = fplus.Denominateur;
+            int denominateur2 = fplus.Denominateur;
+            int newnumerateur;
+            int newdenominateur;
+
+            if (denominateur1 == denominateur2)
+            {
+                newnumerateur = numerateur1 + numerateur2;
+                newdenominateur = denominateur1;
+                Fraction adition = new Fraction(newnumerateur,newdenominateur);
+                return adition;
+            }
+            else
+            {
+                numerateur1 *= denominateur2;
+                denominateur1 *= denominateur2;
+                numerateur2 *= denominateur1;
+                denominateur2 *= denominateur1;
+                newnumerateur = numerateur1 + numerateur2;
+                newdenominateur = denominateur1 + denominateur2;
+                Fraction adition = new Fraction(newnumerateur,newdenominateur);
+                return adition;
+            }
+            
+        }
         public void Signe()
         {
             if (this.Numerateur < 0 && this.Numerateur < 0)
