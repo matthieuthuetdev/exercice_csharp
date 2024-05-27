@@ -79,6 +79,22 @@
             }
         }
 
+        public void Moins(Fraction fmoins)
+        {
+            if (this.Denominateur == fmoins.Denominateur)
+            {
+                this.Numerateur -= fmoins.Denominateur;
+            }
+            else
+            {
+                int multiple = this.Denominateur * fmoins.Denominateur;
+                this.Numerateur -= multiple;
+                this.Denominateur *= multiple;
+                fmoins.Numerateur *= multiple;
+                fmoins.Denominateur *= multiple;
+                this.Numerateur -= fmoins.Numerateur;
+            }
+        }
         public override string ToString()
         {
             if (this.Numerateur == 0)
