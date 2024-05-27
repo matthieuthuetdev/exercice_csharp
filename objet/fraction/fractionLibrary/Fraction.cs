@@ -64,7 +64,19 @@
         }
         public void Plus(Fraction fplus)
         {
-
+            if(this.Denominateur == fplus.Denominateur)
+            {
+                this.Numerateur += fplus.Denominateur;
+            }
+            else
+            {
+                int multiple = this.Denominateur * fplus.Denominateur;
+                this.Numerateur -= multiple;
+                this.Denominateur *= multiple;
+                fplus.Numerateur *= multiple;
+                fplus.Denominateur *= multiple;
+                this.Numerateur += fplus.Numerateur;
+            }
         }
 
         public override string ToString()
