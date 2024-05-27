@@ -57,42 +57,16 @@
             int pgcd = GetPgcd();
             this.Numerateur /=pgcd;
             this.Denominateur /=pgcd;
-            if( this.Numerateur < 0 && this.Numerateur < 0 ) {
+            this.Signe()
+            
+        }
+        
+        public void Signe()
+        {
+            if (this.Numerateur < 0 && this.Numerateur < 0)
+            {
                 this.Numerateur *= -1;
                 this.Denominateur *= -1;
-            }
-        }
-        public void Plus(Fraction fplus)
-        {
-            if(this.Denominateur == fplus.Denominateur)
-            {
-                this.Numerateur += fplus.Denominateur;
-            }
-            else
-            {
-                int multiple = this.Denominateur * fplus.Denominateur;
-                this.Numerateur -= multiple;
-                this.Denominateur *= multiple;
-                fplus.Numerateur *= multiple;
-                fplus.Denominateur *= multiple;
-                this.Numerateur += fplus.Numerateur;
-            }
-        }
-
-        public void Moins(Fraction fmoins)
-        {
-            if (this.Denominateur == fmoins.Denominateur)
-            {
-                this.Numerateur -= fmoins.Denominateur;
-            }
-            else
-            {
-                int multiple = this.Denominateur * fmoins.Denominateur;
-                this.Numerateur -= multiple;
-                this.Denominateur *= multiple;
-                fmoins.Numerateur *= multiple;
-                fmoins.Denominateur *= multiple;
-                this.Numerateur -= fmoins.Numerateur;
             }
         }
         public override string ToString()
