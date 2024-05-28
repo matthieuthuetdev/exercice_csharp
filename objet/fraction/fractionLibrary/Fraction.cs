@@ -1,4 +1,6 @@
-﻿namespace fractionLibrary
+﻿using System.Drawing;
+
+namespace fractionLibrary
 {
     public class Fraction
     {
@@ -106,6 +108,12 @@
                 newdenominateur = denominateur1 * denominateur2;
             }
 
+            return new Fraction(newnumerateur, newdenominateur);
+        }
+        public Fraction Multiplie( Fraction fmultiplie)
+        {
+            int newnumerateur = this.Numerateur * fmultiplie.Numerateur;
+            int newdenominateur = this.Numerateur * fmultiplie.Denominateur;
             return new Fraction(newnumerateur, newdenominateur);
         }
 
