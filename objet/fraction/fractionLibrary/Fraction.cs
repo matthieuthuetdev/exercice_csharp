@@ -64,8 +64,9 @@
         {
             int numerateur1 = this.Numerateur;
             int denominateur1 = this.Denominateur;
-            int numerateur2 = fplus.Denominateur;
+            int numerateur2 = fplus.Numerateur;
             int denominateur2 = fplus.Denominateur;
+
             int newnumerateur;
             int newdenominateur;
 
@@ -73,21 +74,14 @@
             {
                 newnumerateur = numerateur1 + numerateur2;
                 newdenominateur = denominateur1;
-                Fraction adition = new Fraction(newnumerateur,newdenominateur);
-                return adition;
             }
             else
             {
-                numerateur1 *= denominateur2;
-                denominateur1 *= denominateur2;
-                numerateur2 *= denominateur1;
-                denominateur2 *= denominateur1;
-                newnumerateur = numerateur1 + numerateur2;
-                newdenominateur = denominateur1 + denominateur2;
-                Fraction adition = new Fraction(newnumerateur,newdenominateur);
-                return adition;
+                newnumerateur = numerateur1 * denominateur2 + numerateur2 * denominateur1;
+                newdenominateur = denominateur1 * denominateur2;
             }
-            
+
+            return new Fraction(newnumerateur, newdenominateur);
         }
         public void Signe()
         {
