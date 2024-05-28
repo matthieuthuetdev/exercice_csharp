@@ -52,14 +52,15 @@
             this.Numerateur = newNumerateur;
             this.Denominateur = newDenominateur;
         }
-        public void rediure()
+
+        public void Reduire()
         {
             int pgcd = GetPgcd();
-            this.Numerateur /=pgcd;
-            this.Denominateur /=pgcd;
+            this.Numerateur /= pgcd;
+            this.Denominateur /= pgcd;
             this.Signe();
-            
         }
+
         public Fraction Plus(Fraction fplus)
         {
             int numerateur1 = this.Numerateur;
@@ -83,14 +84,40 @@
 
             return new Fraction(newnumerateur, newdenominateur);
         }
+
+        public Fraction Moins(Fraction fmoins)
+        {
+            int numerateur1 = this.Numerateur;
+            int denominateur1 = this.Denominateur;
+            int numerateur2 = fmoins.Numerateur;
+            int denominateur2 = fmoins.Denominateur;
+
+            int newnumerateur;
+            int newdenominateur;
+
+            if (denominateur1 == denominateur2)
+            {
+                newnumerateur = numerateur1 - numerateur2;
+                newdenominateur = denominateur1;
+            }
+            else
+            {
+                newnumerateur = numerateur1 * denominateur2 - numerateur2 * denominateur1;
+                newdenominateur = denominateur1 * denominateur2;
+            }
+
+            return new Fraction(newnumerateur, newdenominateur);
+        }
+
         public void Signe()
         {
-            if (this.Numerateur < 0 && this.Numerateur < 0)
+            if (this.Numerateur < 0 && this.Denominateur < 0)
             {
                 this.Numerateur *= -1;
                 this.Denominateur *= -1;
             }
         }
+
         public override string ToString()
         {
             if (this.Numerateur == 0)
