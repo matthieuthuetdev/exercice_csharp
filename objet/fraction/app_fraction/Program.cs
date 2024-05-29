@@ -10,8 +10,8 @@
             fractionLibrary.Fraction bf = new fractionLibrary.Fraction(3,4);
             Console.WriteLine("la fraction bf est égale à :");
             Console.WriteLine(bf.ToString());
-            object cf = af.Multiplie(bf);
-            Console.WriteLine("le résulta de la multiplication des deux fraction présédante est de :");
+            object cf = af.Divise(bf);
+            Console.WriteLine("le résulta de la division deux fraction présédante est de :");
             Console.WriteLine(cf.ToString());
             Console.WriteLine("vérification que les deux fraction du début n'ait pas bouger a cause de la fonction multiplier");
             Console.WriteLine(af.ToString());
