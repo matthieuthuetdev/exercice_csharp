@@ -55,7 +55,7 @@ namespace fractionLibrary
 
         }
 
-        public void Reduire()
+        private void Reduire()
         {
             int pgcd = GetPgcd();
             this.numerateur /= pgcd;
@@ -72,17 +72,9 @@ namespace fractionLibrary
 
             int newnumerateur;
             int newdenominateur;
-
-            if (denominateur1 == denominateur2)
-            {
-                newnumerateur = numerateur1 + numerateur2;
-                newdenominateur = denominateur1;
-            }
-            else
-            {
-                newnumerateur = numerateur1 * denominateur2 + numerateur2 * denominateur1;
-                newdenominateur = denominateur1 * denominateur2;
-            }
+            newnumerateur = numerateur1 * denominateur2 + numerateur2 * denominateur1;
+            newdenominateur = denominateur1 * denominateur2;
+            
 
             Fraction newFraction = new Fraction(newnumerateur, newdenominateur);
             newFraction.Signe();
@@ -101,16 +93,10 @@ namespace fractionLibrary
             int newnumerateur;
             int newdenominateur;
 
-            if (denominateur1 == denominateur2)
-            {
-                newnumerateur = numerateur1 - numerateur2;
-                newdenominateur = denominateur1;
-            }
-            else
-            {
+            
                 newnumerateur = numerateur1 * denominateur2 - numerateur2 * denominateur1;
                 newdenominateur = denominateur1 * denominateur2;
-            }
+            
 
             Fraction newFraction = new Fraction(newnumerateur, newdenominateur);
             newFraction.Signe();
