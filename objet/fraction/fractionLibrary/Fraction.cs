@@ -113,7 +113,7 @@ namespace fractionLibrary
         public Fraction Multiplie( Fraction fmultiplie)
         {
             int newnumerateur = this.Numerateur * fmultiplie.Numerateur;
-            int newdenominateur = this.Numerateur * fmultiplie.Denominateur;
+            int newdenominateur = this.Denominateur * fmultiplie.Denominateur;
             return new Fraction(newnumerateur, newdenominateur);
         }
 
