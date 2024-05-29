@@ -114,15 +114,22 @@ namespace fractionLibrary
         {
             int newnumerateur = this.Numerateur * fmultiplie.Numerateur;
             int newdenominateur = this.Denominateur * fmultiplie.Denominateur;
-            return new Fraction(newnumerateur, newdenominateur);
+            Fraction newFraction = new Fraction(newnumerateur, newdenominateur);
+            newFraction.Signe();
+            newFraction.Reduire()
+            return newFraction;
+
         }
         public Fraction Divise(Fraction fmultiplie)
         {
             int newnumerateur = this.Numerateur * fmultiplie.Denominateur;
             int newdenominateur = this.Denominateur * fmultiplie.Numerateur;
-            return new Fraction(newnumerateur, newdenominateur);
+            Fraction newFraction = new Fraction(newnumerateur, newdenominateur);
+            newFraction.Signe();
+            newFraction.Reduire();
+            return newFraction;
         }
-        public void Signe()
+        private void Signe()
         {
             if (this.Numerateur < 0 && this.Denominateur < 0)
             {
