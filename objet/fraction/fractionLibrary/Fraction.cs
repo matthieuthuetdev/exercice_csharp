@@ -84,7 +84,11 @@ namespace fractionLibrary
                 newdenominateur = denominateur1 * denominateur2;
             }
 
-            return new Fraction(newnumerateur, newdenominateur);
+            Fraction newFraction = new Fraction(newnumerateur, newdenominateur);
+            newFraction.Signe();
+            newFraction.Reduire();
+            return newFraction;
+
         }
 
         public Fraction Moins(Fraction fmoins)
@@ -108,7 +112,11 @@ namespace fractionLibrary
                 newdenominateur = denominateur1 * denominateur2;
             }
 
-            return new Fraction(newnumerateur, newdenominateur);
+            Fraction newFraction = new Fraction(newnumerateur, newdenominateur);
+            newFraction.Signe();
+            newFraction.Reduire();
+            return newFraction;
+
         }
         public Fraction Multiplie( Fraction fmultiplie)
         {
@@ -116,7 +124,7 @@ namespace fractionLibrary
             int newdenominateur = this.Denominateur * fmultiplie.Denominateur;
             Fraction newFraction = new Fraction(newnumerateur, newdenominateur);
             newFraction.Signe();
-            newFraction.Reduire()
+            newFraction.Reduire();
             return newFraction;
 
         }
