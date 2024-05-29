@@ -44,7 +44,7 @@ namespace fractionLibrary
 
         public void Oppose()
         {
-            this.numerateur = this.numerateur * -1;
+            this.numerateur *= -1;
         }
 
         public void Inverse()
