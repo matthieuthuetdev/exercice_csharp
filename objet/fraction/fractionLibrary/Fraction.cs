@@ -146,7 +146,7 @@ namespace fractionLibrary
                 this.Numerateur /= pgcd;
                 this.Denominateur /= pgcd;
 
-                return "la fraction est égale à : " + this.Numerateur + "/" + this.Denominateur;
+                return this.Numerateur + "/" + this.Denominateur;
             }
         }
     }
