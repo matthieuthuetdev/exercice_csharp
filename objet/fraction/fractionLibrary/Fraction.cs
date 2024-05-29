@@ -116,7 +116,12 @@ namespace fractionLibrary
             int newdenominateur = this.Denominateur * fmultiplie.Denominateur;
             return new Fraction(newnumerateur, newdenominateur);
         }
-
+        public Fraction Divise(Fraction fmultiplie)
+        {
+            int newnumerateur = this.Numerateur * fmultiplie.Denominateur;
+            int newdenominateur = this.Denominateur * fmultiplie.Numerateur;
+            return new Fraction(newnumerateur, newdenominateur);
+        }
         public void Signe()
         {
             if (this.Numerateur < 0 && this.Denominateur < 0)
@@ -142,10 +147,6 @@ namespace fractionLibrary
             }
             else
             {
-                int pgcd = GetPgcd();
-                this.Numerateur /= pgcd;
-                this.Denominateur /= pgcd;
-
                 return this.Numerateur + "/" + this.Denominateur;
             }
         }
