@@ -5,18 +5,18 @@ namespace fractionLibrary
     public class Fraction
     {
         private int numerateur;
-        private int Denominateur;
+        private int denominateur;
 
         public Fraction(int numerateur, int denominateur)
         {
             this.numerateur = numerateur;
-            this.Denominateur = denominateur;
+            this.denominateur = denominateur;
         }
 
         public int GetPgcd()
         {
             int a = this.numerateur;
-            int b = this.Denominateur;
+            int b = this.denominateur;
             int pgcd = 1;
 
             if (a != 0 && b != 0)
@@ -49,26 +49,26 @@ namespace fractionLibrary
 
         public void Inverse()
         {
-            int newnumerateur = this.Denominateur;
-            int newDenominateur = this.numerateur;
+            int newnumerateur = this.denominateur;
+            this.denominateur = this.numerateur;
             this.numerateur = newnumerateur;
-            this.Denominateur = newDenominateur;
+
         }
 
         public void Reduire()
         {
             int pgcd = GetPgcd();
             this.numerateur /= pgcd;
-            this.Denominateur /= pgcd;
+            this.denominateur /= pgcd;
             this.Signe();
         }
 
         public Fraction Plus(Fraction fplus)
         {
             int numerateur1 = this.numerateur;
-            int denominateur1 = this.Denominateur;
+            int denominateur1 = this.denominateur;
             int numerateur2 = fplus.numerateur;
-            int denominateur2 = fplus.Denominateur;
+            int denominateur2 = fplus.denominateur;
 
             int newnumerateur;
             int newdenominateur;
@@ -94,9 +94,9 @@ namespace fractionLibrary
         public Fraction Moins(Fraction fmoins)
         {
             int numerateur1 = this.numerateur;
-            int denominateur1 = this.Denominateur;
+            int denominateur1 = this.denominateur;
             int numerateur2 = fmoins.numerateur;
-            int denominateur2 = fmoins.Denominateur;
+            int denominateur2 = fmoins.denominateur;
 
             int newnumerateur;
             int newdenominateur;
@@ -121,7 +121,7 @@ namespace fractionLibrary
         public Fraction Multiplie( Fraction fmultiplie)
         {
             int newnumerateur = this.numerateur * fmultiplie.numerateur;
-            int newdenominateur = this.Denominateur * fmultiplie.Denominateur;
+            int newdenominateur = this.denominateur * fmultiplie.denominateur;
             Fraction newFraction = new Fraction(newnumerateur, newdenominateur);
             newFraction.Signe();
             newFraction.Reduire();
@@ -130,8 +130,8 @@ namespace fractionLibrary
         }
         public Fraction Divise(Fraction fmultiplie)
         {
-            int newnumerateur = this.numerateur * fmultiplie.Denominateur;
-            int newdenominateur = this.Denominateur * fmultiplie.numerateur;
+            int newnumerateur = this.numerateur * fmultiplie.denominateur;
+            int newdenominateur = this.denominateur * fmultiplie.numerateur;
             Fraction newFraction = new Fraction(newnumerateur, newdenominateur);
             newFraction.Signe();
             newFraction.Reduire();
@@ -139,10 +139,10 @@ namespace fractionLibrary
         }
         private void Signe()
         {
-            if (this.numerateur < 0 && this.Denominateur < 0)
+            if (this.numerateur < 0 && this.denominateur < 0)
             {
                 this.numerateur *= -1;
-                this.Denominateur *= -1;
+                this.denominateur *= -1;
             }
         }
 
@@ -152,17 +152,17 @@ namespace fractionLibrary
             {
                 return "la fraction est égale à : 0 \n";
             }
-            else if (this.Denominateur == 1)
+            else if (this.denominateur == 1)
             {
                 return "la fraction est égale à : " + this.numerateur;
             }
-            else if (this.Denominateur == 0)
+            else if (this.denominateur == 0)
             {
                 return "erreur : aucun nombre ne peut être diviser par 0";
             }
             else
             {
-                return this.numerateur + "/" + this.Denominateur;
+                return this.numerateur + "/" + this.denominateur;
             }
         }
     }
