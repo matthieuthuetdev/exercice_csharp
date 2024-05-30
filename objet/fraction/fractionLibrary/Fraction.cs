@@ -140,11 +140,7 @@ namespace fractionLibrary
             }
             else if (this.denominateur == 1)
             {
-                return "la fraction est égale à : " + this.numerateur;
-            }
-            else if (this.denominateur == 0)
-            {
-                return "erreur : aucun nombre ne peut être diviser par 0";
+                return this.numerateur+"";
             }
             else
             {
