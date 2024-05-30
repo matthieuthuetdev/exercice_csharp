@@ -27,6 +27,7 @@ namespace app_fraction
                 Console.WriteLine("teste de la fonction nverse, le résulta de la fonction est :" + af.ToString());
 
             }
+            catch(fractionLibrary.)
 
 
 
