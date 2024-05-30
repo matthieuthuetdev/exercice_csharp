@@ -134,11 +134,7 @@ namespace fractionLibrary
 
         public override string ToString()
         {
-            if (this.numerateur == 0)
-            {
-                return "la fraction est égale à : 0 \n";
-            }
-            else if (this.denominateur == 1)
+            if (this.denominateur == 1)
             {
                 return this.numerateur+"";
             }
