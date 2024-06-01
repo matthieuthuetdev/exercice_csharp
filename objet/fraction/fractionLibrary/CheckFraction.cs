@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace fractionLibrary
 {
-    internal class CheckFraction : Exception
+    public class CheckFraction : Exception
     {
         public CheckFraction()
         {
